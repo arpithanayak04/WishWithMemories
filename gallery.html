@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Digital Memory Box</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+
+<header>
+    <div class="logo">
+        <h2>MemoryBox</h2>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#image-gallery" class="active">Gallery</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <label id="icon">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+    </nav>
+</header>
+
+<body>
+    <div id="preloader"></div>
+    <section id="slide-container">
+        <button class="music-button" id="musicButton">
+            <i class="fa fa-music"></i>
+        </button>
+        <audio src="FriendshipSong.mp3" id="backgroundAudio"></audio>
+
+        <div class="container">
+            <div class="slide">
+
+                <div class="item" style="background-image:url(image114.jpg);">
+                    <div class="content" style="color: black;">
+                        <div class="name">Beach Selfie</div>
+                        <div class="des">In this moment captured by the ocean, I'm reminded how lucky I am to have you
+                            by my side. Through every wave of life, your friendship has been my anchor, and I couldn't
+                            ask for a better companion. Here's to many more memories together! 🌊❤️</div>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </div>
+
+                <div class="item" style="background-image:url(image75.jpg);">
+                    <div class="content">
+                        <div class="name">Best Bud</div>
+                        <div class="des">Looking at my best friend, I feel an overwhelming sense of gratitude for the
+                            countless memories we’ve built together. Her presence brings me comfort, knowing she’s
+                            always there through every high and low. In this moment, I see not just a friend, but a
+                            sister, someone I trust with my heart.</div>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </div>
+
+                <div class="item" style="background-image:url(image158.jpg);">
+                    <div class="content">
+                        <div class="name">Cherished</div>
+                        <div class="des">As I watch you glow in this beautiful moment of tradition and love, I see the
+                            joy and strength of our bond shine through. As we celebrate new beginnings, I'm grateful to
+                            be by your side, witnessing every radiant smile and shared laugh. Here's to many more
+                            memories together, my dearest friend! 🌼✨</div>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </div>
+
+                <div class="item" style="background-image:url(image152.jpeg);">
+                    <div class="content">
+                        <div class="name">Admiration</div>
+                        <div class="des">Looking at you in this moment, I realize how lucky I am to have you by my side.
+                            Your smile, your presence, everything about you feels like home. With you, even the simplest
+                            moments turn into cherished memories.</div>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </div>
+
+                <div class="item" style="background-image:url(image128.jpg);">
+                    <div class="content" style="color: black;">
+                        <div class="name">Unbreakable</div>
+                        <div class="des">In the shadows, our friendship shines brighter than ever. Together, we share a bond that no distance or time can dim. Side by side, always—forever.</div>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </div>
+
+                <div class="item" style="background-image:url(image20.jpg);">
+                    <div class="content">
+                        <div class="name">Serenity</div>
+                        <div class="des">In this quiet moment, I captured not just the landscape but the essence of our bond. Her love for life and the beauty around us fills every frame, reminding me of the joy we find in the simple things together.</div>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="buttonslide">
+                <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+    <section id="image-gallery">
+        <div class="gallery">
+            <h1>Images</h1>
+            <div class="row" id="image-gallery-content">
+                <!-- Dynamically loaded images will appear here -->
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="video-gallery">
+        <div class="gallery">
+            <h1>Videos</h1>
+            <div class="row" id="video-gallery-content">
+                <!-- Dynamically loaded videos will appear here -->
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Lightbox for full-screen image view -->
+    <div id="lightbox" style="display:none;">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-image" />
+        <a class="previous" id="previous">&#10094;</a> 
+        <a class="nextbtn" id="nextbtn">&#10095;</a>
+    </div>
+
+    <script src="galleryscript.js"></script>
+</body>
+<footer>
+
+    <h3>&copy; All Rights Reserved</h3>
+
+</footer>
+
+</html>
