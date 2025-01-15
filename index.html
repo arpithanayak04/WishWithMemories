@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Digital Memory Box</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("5XskbfcOvh9HWRz7g");
+        })();
+    </script>
+</head>
+
+<header>
+
+    <div class="logo">
+        <h2>MemoryBox</h2>
+    </div>
+    
+    <nav>
+        <ul>
+            <li class="nav-item"><a href="#banner-container" class="active">Home</a></li>
+            <li class="nav-item"><a href="#image-gallery">Gallery</a></li>
+            <li class="nav-item"><a href="#blog">Blog</a></li>
+            <li class="nav-item"><a href="#about">About</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+        <label id="icon">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+    </nav>
+</header>
+
+<body>
+    <div id="preloader"></div>
+
+    <section id="banner-container">
+        <button class="music-button" id="musicButton">
+            <i class="fa fa-music"></i>
+        </button>
+        <audio src="BirthdaySong.mp3" id="backgroundAudio"></audio>
+        <div class="word">
+            <span>H</span>
+            <span>A</span>
+            <span>P</span>
+            <span>P</span>
+            <span>Y</span>
+            <span>&nbsp;</span>
+            <span>B</span>
+            <span>I</span>
+            <span>R</span>
+            <span>T</span>
+            <span>H</span>
+            <span>D</span>
+            <span>A</span>
+            <span>Y</span>
+            <span>&nbsp;</span>
+            <span>S</span>
+            <span>O</span>
+            <span>U</span>
+            <span>J</span>
+            <span>U</span>
+        </div>
+
+        <video src="bannerVideo.mp4" id="bg-video" autoplay muted loop></video>
+
+    </section>
+
+    <section id="image-gallery">
+        <div class="gallery">
+            <h1>Images</h1>
+            <div class="row" id="image-gallery-content1">
+                <!-- Dynamically loaded images will appear here -->
+            </div>
+            <div class="view-more-container">
+                <label for="btnBox" class="btn-area" id="loadimage" style="margin-top: 5%;">
+                    <span class="btn1">View more</span>
+                </label>
+            </div>
+        </div>
+    </section>
+
+    <section id="video-gallery">
+        <div class="gallery">
+            <h1>Videos</h1>
+            <div class="row" id="video-gallery-content">
+                <!-- Dynamically loaded videos will appear here -->
+            </div>
+            <div class="view-more-container">
+                <label for="btnBox" class="btn-area" id="loadvideo" style="margin-top: 5%;">
+                    <span class="btn1">View more</span>
+                </label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox for full-screen image view -->
+    <div id="lightbox" style="display:none;">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-image" />
+    </div>
+
+    <section id="blog">
+        <div class="blog-gallery">
+            <article>
+                <h1>Blog</h1>
+                <img class="blogprofile" src="blogprofile.jpg" />
+                <content>
+                    Six years of friendship filled with laughter, memories, and unwavering support—my best friend has
+                    been my constant through it all, and our bond only grows stronger with time.
+                </content>
+                <h5>Tandem Tales: Our Journey Together</h5>
+                <p>Welcome to Tandem Tales! I’m Arpitha, sharing my story of friendship. Join me on this journey as we
+                    explore life’s highs, lows, and everything in between. Let’s create and share our tales together!
+                </p>
+            </article>
+        </div>
+
+        <div class="view-more-container">
+            <label for="btnBox" class="btn-area" id="visit-site-btn">
+                <span class="btn1">Visit Site</span>
+            </label>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-content">
+            <img src="aboutprofile.png" />
+            <div class="text">
+                <h1>About Us</h1>
+                <h5>Developer & Designer</h5>
+                <p>I am a passionate web developer with a focus on creating dynamic, user-friendly websites and
+                    applications. With a strong background in both front-end and back-end technologies, I specialize in
+                    building responsive, intuitive, and visually engaging digital experiences. Dedicated to continuous
+                    learning and innovation, I aim to deliver solutions that not only meet client goals but also enhance
+                    user interactions.</p>
+                <button type="button" id="btnabout">Hire Me</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-content">
+            <h2>Send Your Birthday Wishes!</h2>
+            <p>Have a favorite memory or something sweet to say to Soujanya? Send your birthday message below!</p>
+        </div>
+        <div class="contact-container">
+            <div class="contactInfo">
+                <div class="contactBox">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Address</h3>
+                        <p>Udupi - 576101</p>
+                    </div>
+                </div>
+                <div class="contactBox">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Phone</h3>
+                        <p>+91 8197412438</p>
+                    </div>
+                </div>
+                <div class="contactBox">
+                    <div class="contact-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <p>soujanyaprabhu3@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contactForm">
+                <form onsubmit="sendEmail(event)">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="fullName" required="required" id="fullName"/>
+                        <span>Full Name</span>
+
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="email" required="required" id="email"/>
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="message" required="required" id="message"></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Send with Love" onclick="sendEmail()" />
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+<footer>
+
+    <h3>&copy; All Rights Reserved</h3>
+
+</footer>
+
+</html>
