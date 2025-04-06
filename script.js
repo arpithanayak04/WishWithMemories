@@ -170,7 +170,7 @@ function sendEmail(event) {
     })
     .then((response) => {
         // Display success message
-        alert("Wishes sent successfully to the customer!");
+        alert("Wishes sent successfully to Soujanya!");
         document.querySelector("form").reset(); // Reset the form fields
     }, (error) => {
         alert("Failed to send the message. Please try again.");
